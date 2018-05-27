@@ -215,3 +215,8 @@ project.lock.json
 #####
 *.exe
 .vs/Calc/v14/.suo
+*.exe
+*.pdb
+*.cache
+*.Cache
+*.pdb
