@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Analyzer">
+      <HintPath>..\Analyzer\bin\Debug\Analyzer.dll</HintPath>
+    </Reference>
     <Reference Include="CalcClass, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\CalcClass\bin\Debug\CalcClass.dll</HintPath>
