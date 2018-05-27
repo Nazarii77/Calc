@@ -213,3 +213,10 @@ project.lock.json
 #####
 # End of core ignore list, below put you custom 'per project' settings (patterns or path)
 #####
+*.exe
+.vs/Calc/v14/.suo
+*.exe
+*.pdb
+*.cache
+*.Cache
+*.pdb
