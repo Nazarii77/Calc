@@ -1,5 +1,0 @@
-C:\Users\user\Documents\GitHub\Calc\CalcClass\bin\Debug\CalcClass.dll
-C:\Users\user\Documents\GitHub\Calc\CalcClass\bin\Debug\CalcClass.pdb
-C:\Users\user\Documents\GitHub\Calc\CalcClass\obj\Debug\CalcClass.csprojResolveAssemblyReference.cache
-C:\Users\user\Documents\GitHub\Calc\CalcClass\obj\Debug\CalcClass.dll
-C:\Users\user\Documents\GitHub\Calc\CalcClass\obj\Debug\CalcClass.pdb
