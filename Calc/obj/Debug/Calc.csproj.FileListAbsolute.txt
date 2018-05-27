@@ -16,3 +16,14 @@ C:\Users\Administrator\Desktop\Calc_lab3\Calc\obj\Debug\Calc.csprojResolveAssemb
 C:\Users\Administrator\Desktop\Calc_lab3\Calc\obj\Debug\Calc.Calc.resources
 C:\Users\Administrator\Desktop\Calc_lab3\Calc\obj\Debug\Calc.Properties.Resources.resources
 C:\Users\Administrator\Desktop\Calc_lab3\Calc\obj\Debug\Calc.csproj.GenerateResource.Cache
+C:\Users\user\Documents\GitHub\Calc\Calc\bin\Debug\Calc.exe.config
+C:\Users\user\Documents\GitHub\Calc\Calc\obj\Debug\Calc.exe
+C:\Users\user\Documents\GitHub\Calc\Calc\obj\Debug\Calc.pdb
+C:\Users\user\Documents\GitHub\Calc\Calc\bin\Debug\Calc.exe
+C:\Users\user\Documents\GitHub\Calc\Calc\bin\Debug\Calc.pdb
+C:\Users\user\Documents\GitHub\Calc\Calc\obj\Debug\Calc.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\Calc\Calc\obj\Debug\Calc.Calc.resources
+C:\Users\user\Documents\GitHub\Calc\Calc\obj\Debug\Calc.Properties.Resources.resources
+C:\Users\user\Documents\GitHub\Calc\Calc\obj\Debug\Calc.csproj.GenerateResource.Cache
+C:\Users\user\Documents\GitHub\Calc\Calc\bin\Debug\CalcClass.dll
+C:\Users\user\Documents\GitHub\Calc\Calc\bin\Debug\CalcClass.pdb

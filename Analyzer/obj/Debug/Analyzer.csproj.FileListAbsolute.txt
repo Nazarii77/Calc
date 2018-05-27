@@ -1,0 +1,5 @@
+C:\Users\user\Documents\GitHub\Calc\Analyzer\bin\Debug\Analyzer.dll
+C:\Users\user\Documents\GitHub\Calc\Analyzer\bin\Debug\Analyzer.pdb
+C:\Users\user\Documents\GitHub\Calc\Analyzer\obj\Debug\Analyzer.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\Calc\Analyzer\obj\Debug\Analyzer.dll
+C:\Users\user\Documents\GitHub\Calc\Analyzer\obj\Debug\Analyzer.pdb
