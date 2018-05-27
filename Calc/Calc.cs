@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CalcClass;
-
+using Analyzer;
 
 namespace Calc
 {
@@ -17,11 +17,7 @@ namespace Calc
         public Calc()
         {
             InitializeComponent();
-            
-            var m = new CalcClass.CalcClass();
-
-            richTextBox1.Text = m.Foo();
-
+            expression_input.Text = "";
         }
 
         public static String memory;
@@ -31,117 +27,107 @@ namespace Calc
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text += "(";
+            expression_input.Text += "(";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text += ")";
+            expression_input.Text += ")";
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             try
             {
-                richTextBox1.Text = richTextBox1.Text.Substring(0, richTextBox1.Text.Length - 1);
+                expression_input.Text = expression_input.Text.Substring(0, expression_input.Text.Length - 1);
             }
             catch
             {
-                richTextBox1.Text = "";
+                expression_input.Text = "";
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
 
-            richTextBox1.Text = "";
+            expression_input.Text = "";
         }
 
         private void button1number_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text += "1";
+            expression_input.Text += "1";
         }
 
         private void button2number_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text += "2";
+            expression_input.Text += "2";
         }
 
         private void button3number_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text += "3";
+            expression_input.Text += "3";
         }
 
         private void button4number_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text += "4";
+            expression_input.Text += "4";
         }
 
         private void button5number_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text += "5";
+            expression_input.Text += "5";
         }
 
         private void button6number_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text += "6";
+            expression_input.Text += "6";
         }
 
         private void button7number_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text += "7";
+            expression_input.Text += "7";
         }
 
         private void button8number_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text += "8";
+            expression_input.Text += "8";
         }
 
         private void button9number_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text += "9";
+            expression_input.Text += "9";
         }
 
         private void button0number_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text += "0";
+            expression_input.Text += "0";
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text += "/";
+            expression_input.Text += "/";
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text += "*";
+            expression_input.Text += "*";
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text += "-";
+            expression_input.Text += "-";
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text += "+";
+            expression_input.Text += "+";
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text += "%";
+            expression_input.Text += "%";
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -153,12 +139,12 @@ namespace Calc
         {
             //public static string memory;
 
-          memory = richTextBox1.Text;
+          memory = expression_input.Text;
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text= memory + "+" + richTextBox1.Text;
+            expression_input.Text= memory + "+" + expression_input.Text;
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -168,20 +154,26 @@ namespace Calc
 
         private void button10_Click(object sender, EventArgs e)
         {
-            string checkminus= richTextBox1.Text.ToString();
+            string checkminus= expression_input.Text.ToString();
             try
             {
                 char minus = System.Convert.ToChar("-");
                 if (checkminus[0] != minus)
                 {
 
-                    richTextBox1.Text = "-" + richTextBox1.Text;
+                    expression_input.Text = "-" + expression_input.Text;
                 }
                 else
-                    richTextBox1.Text = richTextBox1.Text.Remove(0, 1);
+                    expression_input.Text = expression_input.Text.Remove(0, 1);
 
             }
             catch { }
         }
+
+        private void calculate(object sender, EventArgs e)
+        {
+            this.result.Text = Analyzer.Parser.calculate(this.expression_input.Text);
+        }
+
     }
 }

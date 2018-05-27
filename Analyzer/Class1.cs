@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace Analyzer
     public class Analyzer
     {
         private static int erposition = 0;
-
+     
         public static string expression = "";
 
         public static bool ShowMessage = true;
@@ -33,11 +34,10 @@ namespace Analyzer
             return (leftBracketCount == rightBracketCount);
         }
 
-        public static string Format() {                
-                return expression.Replace(" ",string.Empty);
+      
+        public static string Format()
+        {                
+            return expression.Replace(" ", string.Empty);
         }
-        //comment to test if it will be visible
-
-
     }
 }

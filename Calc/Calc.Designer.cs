@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.expression_input = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.result = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -53,7 +53,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button0number = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.calculate_expression = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -67,15 +67,14 @@
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Expression";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // richTextBox1
+            // expression_input
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(117, 13);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(263, 22);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.expression_input.Location = new System.Drawing.Point(117, 13);
+            this.expression_input.Name = "expression_input";
+            this.expression_input.Size = new System.Drawing.Size(263, 22);
+            this.expression_input.TabIndex = 1;
+            this.expression_input.Text = "";
             // 
             // label2
             // 
@@ -86,14 +85,14 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Result";
             // 
-            // richTextBox2
+            // result
             // 
-            this.richTextBox2.Enabled = false;
-            this.richTextBox2.Location = new System.Drawing.Point(117, 51);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(263, 22);
-            this.richTextBox2.TabIndex = 3;
-            this.richTextBox2.Text = "";
+            this.result.Enabled = false;
+            this.result.Location = new System.Drawing.Point(117, 51);
+            this.result.Name = "result";
+            this.result.Size = new System.Drawing.Size(263, 22);
+            this.result.TabIndex = 3;
+            this.result.Text = "";
             // 
             // label3
             // 
@@ -314,16 +313,17 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // button11
+            // calculate_expression
             // 
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button11.ForeColor = System.Drawing.Color.Red;
-            this.button11.Location = new System.Drawing.Point(290, 321);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(39, 30);
-            this.button11.TabIndex = 25;
-            this.button11.Text = "=";
-            this.button11.UseVisualStyleBackColor = true;
+            this.calculate_expression.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.calculate_expression.ForeColor = System.Drawing.Color.Red;
+            this.calculate_expression.Location = new System.Drawing.Point(290, 321);
+            this.calculate_expression.Name = "calculate_expression";
+            this.calculate_expression.Size = new System.Drawing.Size(39, 30);
+            this.calculate_expression.TabIndex = 25;
+            this.calculate_expression.Text = "=";
+            this.calculate_expression.UseVisualStyleBackColor = true;
+            this.calculate_expression.Click += new System.EventHandler(this.calculate);
             // 
             // button12
             // 
@@ -372,7 +372,7 @@
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
+            this.Controls.Add(this.calculate_expression);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button0number);
             this.Controls.Add(this.button9);
@@ -394,9 +394,9 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.result);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.expression_input);
             this.Controls.Add(this.label1);
             this.Name = "Calc";
             this.Text = "Calc";
@@ -409,9 +409,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox expression_input;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox result;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -433,7 +433,7 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button0number;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button calculate_expression;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;

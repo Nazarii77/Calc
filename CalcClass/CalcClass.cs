@@ -8,33 +8,36 @@ namespace CalcClass
 {
     public class CalcClass
     {
-        public string Foo()
-        {
-            return "11111";
-        }
 
-
-
-        public float Add(float a, float b)
+        public double Add(double a, double b)
         {
             return a + b;
         }
 
-        public float Minus(float a, float b)
+        public double Minus(double a, double b)
         {
             return a - b;
         }
 
 
-        public float Multipy(float a, float b)
+        public double Multipy(double a, double b)
         {
             return a * b;
         }
 
+        public double Div(double a, double b)
+        {
+            return a / b;
+        }
 
-        public float Mod(float a, float b)
+        public double Mod(double a, double b)
         {
             return a % b;
+        }
+
+        public double Exp(double a, double b)
+        {
+            return Math.Pow(b, a);
         }
     }
 }
