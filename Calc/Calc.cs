@@ -169,17 +169,19 @@ namespace Calc
         private void button10_Click(object sender, EventArgs e)
         {
             string checkminus= richTextBox1.Text.ToString();
-            try {
-            char minus = System.Convert.ToChar("-");
-            if (checkminus[0] != minus) {
+            try
+            {
+                char minus = System.Convert.ToChar("-");
+                if (checkminus[0] != minus)
+                {
 
-                richTextBox1.Text =   "-" + richTextBox1.Text;
+                    richTextBox1.Text = "-" + richTextBox1.Text;
+                }
+                else
+                    richTextBox1.Text = richTextBox1.Text.Remove(0, 1);
+
             }
-            else
-                richTextBox1.Text = richTextBox1.Text.Remove(0, 1);
-
-            }
-
+            catch { }
         }
     }
 }
