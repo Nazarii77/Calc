@@ -17,12 +17,14 @@ namespace Calc
         public Calc()
         {
             InitializeComponent();
-
+            
             var m = new CalcClass.CalcClass();
 
             richTextBox1.Text = m.Foo();
 
         }
+
+        public static String memory;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -146,6 +148,38 @@ namespace Calc
         {
 
         }
- 
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            //public static string memory;
+
+          memory = richTextBox1.Text;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text= memory + "+" + richTextBox1.Text;
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            memory = "";
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            string checkminus= richTextBox1.Text.ToString();
+            try {
+            char minus = System.Convert.ToChar("-");
+            if (checkminus[0] != minus) {
+
+                richTextBox1.Text =   "-" + richTextBox1.Text;
+            }
+            else
+                richTextBox1.Text = richTextBox1.Text.Remove(0, 1);
+
+            }
+
+        }
     }
 }
