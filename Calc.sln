@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calc", "Calc\Calc.csproj", "{420CD344-EB16-42ED-A125-30C775050065}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalaizerClass", "..\..\Documents\Visual Studio 2015\Projects\AnalaizerClass\AnalaizerClass\AnalaizerClass.csproj", "{0FE29B4C-4E2F-413A-A00F-F7F4EB925BF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{420CD344-EB16-42ED-A125-30C775050065}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{420CD344-EB16-42ED-A125-30C775050065}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{420CD344-EB16-42ED-A125-30C775050065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FE29B4C-4E2F-413A-A00F-F7F4EB925BF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FE29B4C-4E2F-413A-A00F-F7F4EB925BF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FE29B4C-4E2F-413A-A00F-F7F4EB925BF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FE29B4C-4E2F-413A-A00F-F7F4EB925BF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

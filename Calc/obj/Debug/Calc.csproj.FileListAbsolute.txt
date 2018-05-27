@@ -7,3 +7,12 @@ C:\Users\user\documents\visual studio 2015\Projects\Calc\Calc\obj\Debug\Calc.Pro
 C:\Users\user\documents\visual studio 2015\Projects\Calc\Calc\obj\Debug\Calc.csproj.GenerateResource.Cache
 C:\Users\user\documents\visual studio 2015\Projects\Calc\Calc\obj\Debug\Calc.exe
 C:\Users\user\documents\visual studio 2015\Projects\Calc\Calc\obj\Debug\Calc.pdb
+C:\Users\Administrator\Desktop\Calc_lab3\Calc\bin\Debug\Calc.exe.config
+C:\Users\Administrator\Desktop\Calc_lab3\Calc\obj\Debug\Calc.exe
+C:\Users\Administrator\Desktop\Calc_lab3\Calc\obj\Debug\Calc.pdb
+C:\Users\Administrator\Desktop\Calc_lab3\Calc\bin\Debug\Calc.exe
+C:\Users\Administrator\Desktop\Calc_lab3\Calc\bin\Debug\Calc.pdb
+C:\Users\Administrator\Desktop\Calc_lab3\Calc\obj\Debug\Calc.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Calc_lab3\Calc\obj\Debug\Calc.Calc.resources
+C:\Users\Administrator\Desktop\Calc_lab3\Calc\obj\Debug\Calc.Properties.Resources.resources
+C:\Users\Administrator\Desktop\Calc_lab3\Calc\obj\Debug\Calc.csproj.GenerateResource.Cache
