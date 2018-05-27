@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +19,6 @@ namespace Calc
             InitializeComponent();
             
             var m = new CalcClass.CalcClass();
-
 
             richTextBox1.Text = m.Foo();
 
@@ -170,20 +169,19 @@ namespace Calc
         private void button10_Click(object sender, EventArgs e)
         {
             string checkminus= richTextBox1.Text.ToString();
-            try {
-            char minus = System.Convert.ToChar("-");
-            if (checkminus[0] != minus) {
-
-                richTextBox1.Text =   "-" + richTextBox1.Text;
-            }
-            else
-                richTextBox1.Text = richTextBox1.Text.Remove(0, 1);
-
-            } catch
+            try
             {
+                char minus = System.Convert.ToChar("-");
+                if (checkminus[0] != minus)
+                {
+
+                    richTextBox1.Text = "-" + richTextBox1.Text;
+                }
+                else
+                    richTextBox1.Text = richTextBox1.Text.Remove(0, 1);
 
             }
-
+            catch { }
         }
     }
 }
