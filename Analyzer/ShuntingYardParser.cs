@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using CalcClass;
 
 namespace Analyzer
 {
     
     public class Parser
     {
+        static CalcClass.CalcClass CalcClass = new CalcClass.CalcClass();
+
         static bool isANumber(string n)
         {
             double retNum;
@@ -54,21 +57,14 @@ namespace Analyzer
                 }
             }
             while (operatorStack.Count != 0)
-            {
                 outputQueue.Enqueue(operatorStack.Pop());
-            }
-            //string result = "";
-            //foreach (var i in outputQueue)
-            //{
-            //    result += i;
-            //}
+  
             return outputQueue;
         }
 
 
         public static string calculate (string expression)
         {
-            //var tokens = expression.Split(null);
             return calculateRPN(getRPN(expression)).ToString();
         }
 
@@ -96,26 +92,27 @@ namespace Analyzer
                         value1 = outputStack.Pop();
                         value2 = outputStack.Pop();
                         double result = 0.0;
-                        if (s.Equals("+"))
+                        double a = Convert.ToDouble(value1);
+                        double b = Convert.ToDouble(value2);
+                        switch (s)
                         {
-                            result = addValues(Convert.ToDouble(value1), Convert.ToDouble(value2));
+                            case "+":
+                                result = CalcClass.Add(a, b);
+                                break;
+                            case "-":
+                                result = CalcClass.Minus(a, b);
+                                break;
+                            case "*":
+                                result = CalcClass.Multipy(a, b);
+                                break;
+                            case "/":
+                                result = CalcClass.Div(a, b);
+                                break;
+                            case "^":
+                                result = CalcClass.Exp(a, b);
+                                break;
                         }
-                        else if (s.Equals("-"))
-                        {
-                            result = subtractValues(Convert.ToDouble(value1), Convert.ToDouble(value2));
-                        }
-                        else if (s.Equals("*"))
-                        {
-                            result = multiplyValues(Convert.ToDouble(value1), Convert.ToDouble(value2));
-                        }
-                        else if (s.Equals("/"))
-                        {
-                            result = divideValues(Convert.ToDouble(value1), Convert.ToDouble(value2));
-                        }
-                        else if (s.Equals("^"))
-                        {
-                            result = exponentValues(Convert.ToDouble(value1), Convert.ToDouble(value2));
-                        }
+
                         string retVal = Convert.ToString(result);
                         outputStack.Push(retVal);
 
@@ -159,36 +156,6 @@ namespace Analyzer
                     break;
             }
             return precedence;
-        }
-
-        static double subtractValues(double a, double b)
-        {
-            double difference = b - a;
-            return difference;
-        }
-
-        static double addValues(double a, double b)
-        {
-            double sum = a + b;
-            return sum;
-        }
-
-        static double divideValues(double a, double b)
-        {
-            double quotient = b / a;
-            return quotient;
-        }
-
-        static double multiplyValues(double a, double b)
-        {
-            double product = a * b;
-            return product;
-        }
-
-        static double exponentValues(double a, double b)
-        {
-            double product = Math.Pow(b, a);
-            return product;
         }
     }
 }

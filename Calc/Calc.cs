@@ -17,26 +17,12 @@ namespace Calc
         public Calc()
         {
             InitializeComponent();
-            
-            var m = new CalcClass.CalcClass();
-
-            expression_input.Text = m.Foo();
-
+            expression_input.Text = "";
         }
 
         public static String memory;
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button11_Click(object sender, EventArgs e)
         {
 
         }
