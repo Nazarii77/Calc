@@ -25,3 +25,5 @@ C:\Users\user\Documents\GitHub\Calc\Calc\obj\Debug\Calc.csprojResolveAssemblyRef
 C:\Users\user\Documents\GitHub\Calc\Calc\obj\Debug\Calc.Calc.resources
 C:\Users\user\Documents\GitHub\Calc\Calc\obj\Debug\Calc.Properties.Resources.resources
 C:\Users\user\Documents\GitHub\Calc\Calc\obj\Debug\Calc.csproj.GenerateResource.Cache
+C:\Users\user\Documents\GitHub\Calc\Calc\bin\Debug\CalcClass.dll
+C:\Users\user\Documents\GitHub\Calc\Calc\bin\Debug\CalcClass.pdb
