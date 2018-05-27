@@ -39,3 +39,4 @@ C:\Users\bodya\Desktop\Calc\Calc\obj\Debug\Calc.csproj.CoreCompileInputs.cache
 C:\Users\bodya\Desktop\Calc\Calc\obj\Debug\Calc.csproj.CopyComplete
 C:\Users\bodya\Desktop\Calc\Calc\obj\Debug\Calc.exe
 C:\Users\bodya\Desktop\Calc\Calc\obj\Debug\Calc.pdb
+C:\Users\bodya\Desktop\Calc\Calc\bin\Debug\CalcClass.dll

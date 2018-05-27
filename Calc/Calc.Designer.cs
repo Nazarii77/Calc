@@ -312,6 +312,7 @@
             this.button10.TabIndex = 24;
             this.button10.Text = "+/-";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -335,6 +336,7 @@
             this.button12.Text = "MR";
             this.button12.UseCompatibleTextRendering = true;
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button13
             // 
@@ -347,6 +349,7 @@
             this.button13.Text = "M+";
             this.button13.UseCompatibleTextRendering = true;
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
@@ -359,6 +362,7 @@
             this.button14.Text = "MC";
             this.button14.UseCompatibleTextRendering = true;
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // Calc
             // 
