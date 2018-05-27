@@ -103,7 +103,7 @@ namespace Analyzer
                                 result = CalcClass.Minus(a, b);
                                 break;
                             case "*":
-                                result = CalcClass.Multipy(a, b);
+                                result = CalcClass.Multiply(a, b);
                                 break;
                             case "/":
                                 result = CalcClass.Div(a, b);
