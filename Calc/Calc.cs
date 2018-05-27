@@ -18,9 +18,9 @@ namespace Calc
         {
             InitializeComponent();
 
-            //var m = new CalcClass.CalcClass();
+            var m = new CalcClass.CalcClass();
 
-            //richTextBox1.Text = m.Foo();
+            richTextBox1.Text = m.Foo();
 
         }
 

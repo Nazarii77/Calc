@@ -33,8 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CalcClass">
-      <HintPath>..\..\..\Visual Studio 2015\Projects\CalcClass\CalcClass\bin\Debug\CalcClass.dll</HintPath>
+    <Reference Include="CalcClass, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CalcClass\bin\Debug\CalcClass.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
