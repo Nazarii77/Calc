@@ -36,7 +36,7 @@ namespace Analyzer
         public static string Format() {                
                 return expression.Replace(" ",string.Empty);
         }
-
+        //comment to test if it will be visible
 
 
     }
