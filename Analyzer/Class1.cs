@@ -33,6 +33,10 @@ namespace Analyzer
             return (leftBracketCount == rightBracketCount);
         }
 
+        public static string Format() {                
+                return expression.Replace(" ",string.Empty);
+        }
+
 
 
     }
