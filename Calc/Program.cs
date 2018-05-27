@@ -12,11 +12,33 @@ namespace Calc
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Calc());
+
+            if (args.Length > 0)
+            {
+                // Command line given, display console 
+                AllocConsole();
+                ConsoleMain(args);
+            }
+            else
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Calc());
+            }
+
         }
+
+        private static void ConsoleMain(string[] args)
+        {
+            Console.WriteLine("Command line = {0}", Environment.CommandLine);
+            for (int ix = 0; ix < args.Length; ++ix)
+                Console.WriteLine("Argument{0} = {1}", ix + 1, args[ix]);
+            Console.ReadLine();
+        }
+
+        [System.Runtime.InteropServices.DllImport("kernel32.dll")]
+        private static extern bool AllocConsole();
     }
 }
