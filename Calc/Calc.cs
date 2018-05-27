@@ -20,7 +20,7 @@ namespace Calc
 
             //var m = new CalcClass.CalcClass();
 
-            //richTextBox1.Text = m.Foo();
+            richTextBox1.Text = "";
 
         }
 

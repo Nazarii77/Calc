@@ -27,3 +27,15 @@ C:\Users\user\Documents\GitHub\Calc\Calc\obj\Debug\Calc.Properties.Resources.res
 C:\Users\user\Documents\GitHub\Calc\Calc\obj\Debug\Calc.csproj.GenerateResource.Cache
 C:\Users\user\Documents\GitHub\Calc\Calc\bin\Debug\CalcClass.dll
 C:\Users\user\Documents\GitHub\Calc\Calc\bin\Debug\CalcClass.pdb
+C:\Users\bodya\Desktop\Calc\Calc\bin\Debug\Calc.exe.config
+C:\Users\bodya\Desktop\Calc\Calc\bin\Debug\Calc.exe
+C:\Users\bodya\Desktop\Calc\Calc\bin\Debug\Calc.pdb
+C:\Users\bodya\Desktop\Calc\Calc\bin\Debug\CalcClass.pdb
+C:\Users\bodya\Desktop\Calc\Calc\obj\Debug\Calc.csprojResolveAssemblyReference.cache
+C:\Users\bodya\Desktop\Calc\Calc\obj\Debug\Calc.Calc.resources
+C:\Users\bodya\Desktop\Calc\Calc\obj\Debug\Calc.Properties.Resources.resources
+C:\Users\bodya\Desktop\Calc\Calc\obj\Debug\Calc.csproj.GenerateResource.cache
+C:\Users\bodya\Desktop\Calc\Calc\obj\Debug\Calc.csproj.CoreCompileInputs.cache
+C:\Users\bodya\Desktop\Calc\Calc\obj\Debug\Calc.csproj.CopyComplete
+C:\Users\bodya\Desktop\Calc\Calc\obj\Debug\Calc.exe
+C:\Users\bodya\Desktop\Calc\Calc\obj\Debug\Calc.pdb
