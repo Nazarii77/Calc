@@ -75,6 +75,8 @@
             this.expression_input.Size = new System.Drawing.Size(263, 22);
             this.expression_input.TabIndex = 1;
             this.expression_input.Text = "";
+            this.expression_input.Enter += new System.EventHandler(this.calculate);
+            this.expression_input.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.calculate);
             // 
             // label2
             // 
