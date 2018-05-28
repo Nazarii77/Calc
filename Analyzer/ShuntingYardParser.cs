@@ -30,7 +30,17 @@ namespace Analyzer
             {
                 if (isANumber(token[i]))
                 {
-                    outputQueue.Enqueue(token[i]);
+                    string number = token[i];
+
+                    int j = i + 1;
+                    while (j < token.Length && (isANumber(token[j]) || token[j] == ","))
+                    {
+                        i = j;
+                        number += token[j];
+                        j++;
+                    }
+                    outputQueue.Enqueue(number);
+
                 }
                 else if (token[i].Equals("^"))
                 {
@@ -94,11 +104,9 @@ namespace Analyzer
                     {
                         string value1, value2;
                  
-                         value1 = outputStack.First();
-                         value2 = outputStack.First();
+                         value1 = outputStack.Pop();
+                         value2 = outputStack.Pop();
  
-
-                        
                         double result = 0.0;
                         double a = Convert.ToDouble(value1);
                         double b = Convert.ToDouble(value2);

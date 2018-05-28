@@ -19,17 +19,8 @@ namespace Calc
         {
             InitializeComponent();
             expression_input.Text = "";
+        }
 
-             
-        }
-        private void CheckKeys(object sender, System.Windows.Forms.KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)13)
-            {
-                // Then Enter key was pressed
-               
-            }
-        }
         public static String memory;
 
         private void Form1_Load(object sender, EventArgs e)
@@ -47,7 +38,7 @@ namespace Calc
             expression_input.Text += ")";
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void backspaceClicked(object sender, EventArgs e)
         {
             try
             {
@@ -170,7 +161,6 @@ namespace Calc
                 char minus = System.Convert.ToChar("-");
                 if (checkminus[0] != minus)
                 {
-
                     expression_input.Text = "-" + expression_input.Text;
                 }
                 else
@@ -183,10 +173,17 @@ namespace Calc
         private void calculate(object sender, EventArgs e)
         {
             this.result.Text = Analyzer.Parser.calculate(this.expression_input.Text);
-
-            expression_input.Text = Regex.Replace(expression_input.Text, @"\t|\n|\r", "");
         }
-      
 
+        private void expression_input_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                this.result.Text = Analyzer.Parser.calculate(this.expression_input.Text);
+
+            }
+
+        }
     }
 }

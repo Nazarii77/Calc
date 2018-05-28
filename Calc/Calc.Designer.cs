@@ -34,7 +34,7 @@
             this.result = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.backspace = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button1number = new System.Windows.Forms.Button();
             this.button2number = new System.Windows.Forms.Button();
@@ -76,8 +76,7 @@
             this.expression_input.Size = new System.Drawing.Size(263, 22);
             this.expression_input.TabIndex = 1;
             this.expression_input.Text = "";
-            this.expression_input.Enter += new System.EventHandler(this.calculate);
-            this.expression_input.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.calculate);
+            this.expression_input.KeyDown += new System.Windows.Forms.KeyEventHandler(this.expression_input_KeyDown);
             // 
             // label2
             // 
@@ -117,16 +116,16 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // backspace
             // 
-            this.button3.ForeColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(214, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(84, 30);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Backspace";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.backspace.ForeColor = System.Drawing.Color.Red;
+            this.backspace.Location = new System.Drawing.Point(214, 19);
+            this.backspace.Name = "backspace";
+            this.backspace.Size = new System.Drawing.Size(84, 30);
+            this.backspace.TabIndex = 7;
+            this.backspace.Text = "Backspace";
+            this.backspace.UseVisualStyleBackColor = true;
+            this.backspace.Click += new System.EventHandler(this.backspaceClicked);
             // 
             // button4
             // 
@@ -362,7 +361,7 @@
             // 
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.backspace);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Location = new System.Drawing.Point(15, 101);
             this.groupBox1.Name = "groupBox1";
@@ -418,7 +417,7 @@
         private System.Windows.Forms.RichTextBox result;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button backspace;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1number;
         private System.Windows.Forms.Button button2number;

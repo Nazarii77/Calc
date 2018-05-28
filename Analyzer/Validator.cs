@@ -23,11 +23,18 @@ namespace Analyzer
     {
         static string OPERATORS = "*-+/%^";
 
-        static Error checkIfOperatorsOneAfterAnother(string expression)
+        static Error checkOperators(string expression)
         {
             bool isOperator = false;
             for (var i = 0; i < expression.Length; i++)
             {
+                if (!Char.IsNumber(expression[i])
+                    && !OPERATORS.Contains(expression[i])
+                    && expression[i] != '('
+                    && expression[i] != ')'
+                    && expression[i] != ',')
+                    return new Error("Невідомий оператор на " + i + " символі.", i, 2);
+
                 if (isOperator == true && OPERATORS.Contains(expression[i]))
                     return new Error("Два  підряд  оператори  на " + i + " символі.", i, 4);
                 isOperator = OPERATORS.Contains(expression[i]);
@@ -38,19 +45,9 @@ namespace Analyzer
 
         public static Error getError(string expression)
         {
-            var twoOperatorsNearEachOther = checkIfOperatorsOneAfterAnother(expression);
-            if (twoOperatorsNearEachOther.error_position != -1) return twoOperatorsNearEachOther;
+            var operatorError = checkOperators(expression);
+            if (operatorError.error_position != -1) return operatorError;
             return new Error("", -1, 0);
         }
-
-        //public static string getErrorMessage(Error error)
-        //{
-        //    switch (error.errorCode)
-        //    {
-        //        case 4:
-        //            return "Два  підряд  оператори  на  <i>  символі.";
-        //    }
-        //    return "";
-        //}
     }
 }
