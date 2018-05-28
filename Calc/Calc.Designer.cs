@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.KeyPreview = true;
             this.label1 = new System.Windows.Forms.Label();
             this.expression_input = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -403,6 +404,7 @@
             this.Name = "Calc";
             this.Text = "Calc";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calc_KeyDown);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

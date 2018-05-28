@@ -116,13 +116,13 @@ namespace Analyzer
                                 result = CalcClass.Add(a, b);
                                 break;
                             case "-":
-                                result = CalcClass.Minus(a, b);
+                                result = CalcClass.Minus(b, a);
                                 break;
                             case "*":
                                 result = CalcClass.Multiply(a, b);
                                 break;
                             case "/":
-                                result = CalcClass.Div(a, b);
+                                result = CalcClass.Div(b, a);
                                 break;
                             case "%":
                                 result = CalcClass.Mod(b, a);
