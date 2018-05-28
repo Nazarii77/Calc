@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 using CalcClass;
+using System.Text.RegularExpressions;
 
 namespace Analyzer
 {
@@ -92,8 +93,12 @@ namespace Analyzer
                     else
                     {
                         string value1, value2;
-                        value1 = outputStack.Pop();
-                        value2 = outputStack.Pop();
+                 
+                         value1 = outputStack.First();
+                         value2 = outputStack.First();
+ 
+
+                        
                         double result = 0.0;
                         double a = Convert.ToDouble(value1);
                         double b = Convert.ToDouble(value2);
@@ -106,7 +111,7 @@ namespace Analyzer
                                 result = CalcClass.Minus(a, b);
                                 break;
                             case "*":
-                                result = CalcClass.Multipy(a, b);
+                                result = CalcClass.Multiply(a, b);
                                 break;
                             case "/":
                                 result = CalcClass.Div(a, b);

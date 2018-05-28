@@ -20,7 +20,7 @@ namespace CalcClass
         }
 
 
-        public double Multipy(double a, double b)
+        public double Multiply(double a, double b)
         {
             return a * b;
         }
