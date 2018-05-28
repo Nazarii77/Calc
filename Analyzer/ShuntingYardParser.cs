@@ -65,7 +65,10 @@ namespace Analyzer
 
         public static string calculate (string expression)
         {
-            return calculateRPN(getRPN(expression)).ToString();
+            var error = Validator.getError(expression);
+            if (error.errorCode == 0)
+                return calculateRPN(getRPN(expression)).ToString();
+            return error.message;
         }
 
         static double calculateRPN(Queue<string> inputQueue)
@@ -108,6 +111,9 @@ namespace Analyzer
                             case "/":
                                 result = CalcClass.Div(a, b);
                                 break;
+                            case "%":
+                                result = CalcClass.Mod(b, a);
+                                break;
                             case "^":
                                 result = CalcClass.Exp(a, b);
                                 break;
@@ -145,6 +151,7 @@ namespace Analyzer
                     break;
                 case '*':
                 case '/':
+                case '%':
                     precedence = 3;
                     break;
                 case '^':

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Analyzer;
 
 namespace Calc
 {
@@ -19,7 +20,10 @@ namespace Calc
             {
                 // Command line given, display console 
                 AllocConsole();
-                ConsoleMain(args);
+
+                Console.WriteLine(Analyzer.Parser.calculate(args[0]));
+                Console.ReadLine();
+
             }
             else
             {
@@ -30,13 +34,6 @@ namespace Calc
 
         }
 
-        private static void ConsoleMain(string[] args)
-        {
-            Console.WriteLine("Command line = {0}", Environment.CommandLine);
-            for (int ix = 0; ix < args.Length; ++ix)
-                Console.WriteLine("Argument{0} = {1}", ix + 1, args[ix]);
-            Console.ReadLine();
-        }
 
         [System.Runtime.InteropServices.DllImport("kernel32.dll")]
         private static extern bool AllocConsole();

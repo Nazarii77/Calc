@@ -32,7 +32,6 @@
             this.expression_input = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.result = new System.Windows.Forms.RichTextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -57,6 +56,8 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -94,18 +95,9 @@
             this.result.TabIndex = 3;
             this.result.Text = "";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(56, 85);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Editing";
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(74, 120);
+            this.button1.Location = new System.Drawing.Point(16, 21);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(39, 30);
             this.button1.TabIndex = 5;
@@ -115,7 +107,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(119, 120);
+            this.button2.Location = new System.Drawing.Point(72, 21);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(39, 30);
             this.button2.TabIndex = 6;
@@ -126,7 +118,7 @@
             // button3
             // 
             this.button3.ForeColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(184, 120);
+            this.button3.Location = new System.Drawing.Point(214, 19);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(84, 30);
             this.button3.TabIndex = 7;
@@ -137,7 +129,7 @@
             // button4
             // 
             this.button4.ForeColor = System.Drawing.Color.Red;
-            this.button4.Location = new System.Drawing.Point(290, 120);
+            this.button4.Location = new System.Drawing.Point(320, 21);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(39, 30);
             this.button4.TabIndex = 8;
@@ -317,7 +309,7 @@
             // 
             this.calculate_expression.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.calculate_expression.ForeColor = System.Drawing.Color.Red;
-            this.calculate_expression.Location = new System.Drawing.Point(290, 321);
+            this.calculate_expression.Location = new System.Drawing.Point(335, 321);
             this.calculate_expression.Name = "calculate_expression";
             this.calculate_expression.Size = new System.Drawing.Size(39, 30);
             this.calculate_expression.TabIndex = 25;
@@ -329,7 +321,7 @@
             // 
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button12.ForeColor = System.Drawing.Color.Blue;
-            this.button12.Location = new System.Drawing.Point(290, 177);
+            this.button12.Location = new System.Drawing.Point(335, 177);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(39, 30);
             this.button12.TabIndex = 26;
@@ -342,7 +334,7 @@
             // 
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button13.ForeColor = System.Drawing.Color.Blue;
-            this.button13.Location = new System.Drawing.Point(290, 224);
+            this.button13.Location = new System.Drawing.Point(335, 224);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(39, 31);
             this.button13.TabIndex = 27;
@@ -355,7 +347,7 @@
             // 
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button14.ForeColor = System.Drawing.Color.Blue;
-            this.button14.Location = new System.Drawing.Point(290, 276);
+            this.button14.Location = new System.Drawing.Point(335, 273);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(39, 30);
             this.button14.TabIndex = 28;
@@ -364,11 +356,25 @@
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Location = new System.Drawing.Point(15, 101);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(365, 57);
+            this.groupBox1.TabIndex = 29;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Editing";
+            // 
             // Calc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(413, 377);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
@@ -389,11 +395,6 @@
             this.Controls.Add(this.button3number);
             this.Controls.Add(this.button2number);
             this.Controls.Add(this.button1number);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.result);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.expression_input);
@@ -401,6 +402,7 @@
             this.Name = "Calc";
             this.Text = "Calc";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -412,7 +414,6 @@
         private System.Windows.Forms.RichTextBox expression_input;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox result;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -437,6 +438,7 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
